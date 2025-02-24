@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var appController = AppController()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Location Logger Running")
+                .font(.title)
+                .padding()
+
+            Button("Start Tracking") {
+                appController.startApp()
+            }
+            .padding()
         }
-        .padding()
+        .onAppear {
+            appController.startApp() // Ensure tracking starts when the view appears
+        }
     }
 }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
 
 #Preview {
     ContentView()
