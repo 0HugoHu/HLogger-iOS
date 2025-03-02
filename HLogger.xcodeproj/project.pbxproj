@@ -31,6 +31,7 @@
 		C25BA3152D6ABAA600E83DC9 /* HLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BA3252D6ABAA700E83DC9 /* HLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BA32F2D6ABAA700E83DC9 /* HLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25BA3792D73F40E00E83DC9 /* generate_protos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_protos.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -94,6 +95,7 @@
 		C25BA30C2D6ABAA600E83DC9 = {
 			isa = PBXGroup;
 			children = (
+				C25BA3782D73F3B800E83DC9 /* scripts */,
 				C25BA3172D6ABAA600E83DC9 /* HLogger */,
 				C25BA3282D6ABAA700E83DC9 /* HLoggerTests */,
 				C25BA3322D6ABAA700E83DC9 /* HLoggerUITests */,
@@ -109,6 +111,14 @@
 				C25BA32F2D6ABAA700E83DC9 /* HLoggerUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C25BA3782D73F3B800E83DC9 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				C25BA3792D73F40E00E83DC9 /* generate_protos.sh */,
+			);
+			path = scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,11 +436,13 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to track movements efficiently.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app needs access to your location even when running in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs access to your location even when running in the background.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data to detect activity types like walking, running, and driving.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,11 +475,13 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to track movements efficiently.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app needs access to your location even when running in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs access to your location even when running in the background.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data to detect activity types like walking, running, and driving.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

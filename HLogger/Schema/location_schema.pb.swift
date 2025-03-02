@@ -20,50 +20,44 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Locationlogging_LocationEntry: Sendable {
+public struct Locationlogging_LocationEntry: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var timestamp: String = String()
+  public var timestamp: String = String()
 
-  var latitude: Double = 0
+  public var latitude: Double = 0
 
-  var longitude: Double = 0
+  public var longitude: Double = 0
 
-  var speed: Double {
-    get {return _speed ?? 0}
-    set {_speed = newValue}
-  }
-  /// Returns true if `speed` has been explicitly set.
-  var hasSpeed: Bool {return self._speed != nil}
-  /// Clears the value of `speed`. Subsequent reads from it will return its default value.
-  mutating func clearSpeed() {self._speed = nil}
+  public var speed: Double = 0
 
-  var altitude: Double {
-    get {return _altitude ?? 0}
-    set {_altitude = newValue}
-  }
-  /// Returns true if `altitude` has been explicitly set.
-  var hasAltitude: Bool {return self._altitude != nil}
-  /// Clears the value of `altitude`. Subsequent reads from it will return its default value.
-  mutating func clearAltitude() {self._altitude = nil}
+  public var altitude: Double = 0
 
-  var horizontalAccuracy: Double = 0
+  public var horizontalAccuracy: Double = 0
 
-  var verticalAccuracy: Double = 0
+  public var verticalAccuracy: Double = 0
 
-  var status: String = String()
+  public var status: String = String()
 
-  /// Unique ID for multi-device tracking
-  var deviceID: String = String()
+  public var deviceID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
+}
 
-  fileprivate var _speed: Double? = nil
-  fileprivate var _altitude: Double? = nil
+public struct Locationlogging_LocationLog: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var entries: [Locationlogging_LocationEntry] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -71,8 +65,8 @@ struct Locationlogging_LocationEntry: Sendable {
 fileprivate let _protobuf_package = "locationlogging"
 
 extension Locationlogging_LocationEntry: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".LocationEntry"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".LocationEntry"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "timestamp"),
     2: .same(proto: "latitude"),
     3: .same(proto: "longitude"),
@@ -84,7 +78,7 @@ extension Locationlogging_LocationEntry: SwiftProtobuf.Message, SwiftProtobuf._M
     9: .standard(proto: "device_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -93,8 +87,8 @@ extension Locationlogging_LocationEntry: SwiftProtobuf.Message, SwiftProtobuf._M
       case 1: try { try decoder.decodeSingularStringField(value: &self.timestamp) }()
       case 2: try { try decoder.decodeSingularDoubleField(value: &self.latitude) }()
       case 3: try { try decoder.decodeSingularDoubleField(value: &self.longitude) }()
-      case 4: try { try decoder.decodeSingularDoubleField(value: &self._speed) }()
-      case 5: try { try decoder.decodeSingularDoubleField(value: &self._altitude) }()
+      case 4: try { try decoder.decodeSingularDoubleField(value: &self.speed) }()
+      case 5: try { try decoder.decodeSingularDoubleField(value: &self.altitude) }()
       case 6: try { try decoder.decodeSingularDoubleField(value: &self.horizontalAccuracy) }()
       case 7: try { try decoder.decodeSingularDoubleField(value: &self.verticalAccuracy) }()
       case 8: try { try decoder.decodeSingularStringField(value: &self.status) }()
@@ -104,11 +98,7 @@ extension Locationlogging_LocationEntry: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.timestamp.isEmpty {
       try visitor.visitSingularStringField(value: self.timestamp, fieldNumber: 1)
     }
@@ -118,12 +108,12 @@ extension Locationlogging_LocationEntry: SwiftProtobuf.Message, SwiftProtobuf._M
     if self.longitude.bitPattern != 0 {
       try visitor.visitSingularDoubleField(value: self.longitude, fieldNumber: 3)
     }
-    try { if let v = self._speed {
-      try visitor.visitSingularDoubleField(value: v, fieldNumber: 4)
-    } }()
-    try { if let v = self._altitude {
-      try visitor.visitSingularDoubleField(value: v, fieldNumber: 5)
-    } }()
+    if self.speed.bitPattern != 0 {
+      try visitor.visitSingularDoubleField(value: self.speed, fieldNumber: 4)
+    }
+    if self.altitude.bitPattern != 0 {
+      try visitor.visitSingularDoubleField(value: self.altitude, fieldNumber: 5)
+    }
     if self.horizontalAccuracy.bitPattern != 0 {
       try visitor.visitSingularDoubleField(value: self.horizontalAccuracy, fieldNumber: 6)
     }
@@ -139,16 +129,48 @@ extension Locationlogging_LocationEntry: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Locationlogging_LocationEntry, rhs: Locationlogging_LocationEntry) -> Bool {
+  public static func ==(lhs: Locationlogging_LocationEntry, rhs: Locationlogging_LocationEntry) -> Bool {
     if lhs.timestamp != rhs.timestamp {return false}
     if lhs.latitude != rhs.latitude {return false}
     if lhs.longitude != rhs.longitude {return false}
-    if lhs._speed != rhs._speed {return false}
-    if lhs._altitude != rhs._altitude {return false}
+    if lhs.speed != rhs.speed {return false}
+    if lhs.altitude != rhs.altitude {return false}
     if lhs.horizontalAccuracy != rhs.horizontalAccuracy {return false}
     if lhs.verticalAccuracy != rhs.verticalAccuracy {return false}
     if lhs.status != rhs.status {return false}
     if lhs.deviceID != rhs.deviceID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Locationlogging_LocationLog: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".LocationLog"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "entries"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.entries) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.entries.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.entries, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Locationlogging_LocationLog, rhs: Locationlogging_LocationLog) -> Bool {
+    if lhs.entries != rhs.entries {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

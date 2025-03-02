@@ -11,11 +11,6 @@ class AppController : ObservableObject {
     private let locationModule = LocationModule()
     
     func startApp() {
-        SchemaManager.fetchSchema { schema in
-            if let schema = schema {
-                print("Schema fetched: \(schema)")
-            }
-        }
         locationModule.startTracking()
     }
 }
