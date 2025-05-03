@@ -8,38 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		C25BA36F2D6C52FC00E83DC9 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = C25BA36E2D6C52FC00E83DC9 /* SwiftProtobuf */; };
+		C25BA3DE2D7818CD00E83DC9 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = C25BA3DD2D7818CD00E83DC9 /* AWSS3 */; };
+		C25BA4962D7AD26200E83DC9 /* AWSCognitoIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = C25BA3DB2D7818CD00E83DC9 /* AWSCognitoIdentity */; };
+		C25BA60E2D925FC300E83DC9 /* HCronCore in Frameworks */ = {isa = PBXBuildFile; productRef = C25BA60D2D925FC300E83DC9 /* HCronCore */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C25BA3262D6ABAA700E83DC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C25BA30D2D6ABAA600E83DC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C25BA3142D6ABAA600E83DC9;
-			remoteInfo = HLogger;
+/* Begin PBXCopyFilesBuildPhase section */
+		C25BA38E2D75466A00E83DC9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C25BA3302D6ABAA700E83DC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C25BA30D2D6ABAA600E83DC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C25BA3142D6ABAA600E83DC9;
-			remoteInfo = HLogger;
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C25BA3152D6ABAA600E83DC9 /* HLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C25BA3252D6ABAA700E83DC9 /* HLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C25BA32F2D6ABAA700E83DC9 /* HLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BA3792D73F40E00E83DC9 /* generate_protos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_protos.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C25BA3662D6AC9E900E83DC9 /* Exceptions for "HLogger" folder in "HLogger" target */ = {
+		C25BA6072D925E8E00E83DC9 /* Exceptions for "Tool" folder in "HLogger" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HCronCore,
+			);
+			target = C25BA3142D6ABAA600E83DC9 /* HLogger */;
+		};
+		C25BA61F2D927B7900E83DC9 /* Exceptions for "HLogger" folder in "HLogger" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				"Preview Content/Preview Assets.xcassets",
 			);
 			target = C25BA3142D6ABAA600E83DC9 /* HLogger */;
 		};
@@ -49,19 +52,22 @@
 		C25BA3172D6ABAA600E83DC9 /* HLogger */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				C25BA3662D6AC9E900E83DC9 /* Exceptions for "HLogger" folder in "HLogger" target */,
+				C25BA61F2D927B7900E83DC9 /* Exceptions for "HLogger" folder in "HLogger" target */,
 			);
 			path = HLogger;
 			sourceTree = "<group>";
 		};
-		C25BA3282D6ABAA700E83DC9 /* HLoggerTests */ = {
+		C25BA3B92D755BA200E83DC9 /* Schema */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HLoggerTests;
+			path = Schema;
 			sourceTree = "<group>";
 		};
-		C25BA3322D6ABAA700E83DC9 /* HLoggerUITests */ = {
+		C25BA4432D782A8300E83DC9 /* Tool */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HLoggerUITests;
+			exceptions = (
+				C25BA6072D925E8E00E83DC9 /* Exceptions for "Tool" folder in "HLogger" target */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -71,21 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C25BA60E2D925FC300E83DC9 /* HCronCore in Frameworks */,
+				C25BA4962D7AD26200E83DC9 /* AWSCognitoIdentity in Frameworks */,
+				C25BA3DE2D7818CD00E83DC9 /* AWSS3 in Frameworks */,
 				C25BA36F2D6C52FC00E83DC9 /* SwiftProtobuf in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C25BA3222D6ABAA700E83DC9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C25BA32C2D6ABAA700E83DC9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,10 +90,10 @@
 		C25BA30C2D6ABAA600E83DC9 = {
 			isa = PBXGroup;
 			children = (
-				C25BA3782D73F3B800E83DC9 /* scripts */,
+				C25BA3B92D755BA200E83DC9 /* Schema */,
+				C25BA4432D782A8300E83DC9 /* Tool */,
+				C25BA3782D73F3B800E83DC9 /* Script */,
 				C25BA3172D6ABAA600E83DC9 /* HLogger */,
-				C25BA3282D6ABAA700E83DC9 /* HLoggerTests */,
-				C25BA3322D6ABAA700E83DC9 /* HLoggerUITests */,
 				C25BA3162D6ABAA600E83DC9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,18 +102,16 @@
 			isa = PBXGroup;
 			children = (
 				C25BA3152D6ABAA600E83DC9 /* HLogger.app */,
-				C25BA3252D6ABAA700E83DC9 /* HLoggerTests.xctest */,
-				C25BA32F2D6ABAA700E83DC9 /* HLoggerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C25BA3782D73F3B800E83DC9 /* scripts */ = {
+		C25BA3782D73F3B800E83DC9 /* Script */ = {
 			isa = PBXGroup;
 			children = (
 				C25BA3792D73F40E00E83DC9 /* generate_protos.sh */,
 			);
-			path = scripts;
+			path = Script;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +124,7 @@
 				C25BA3112D6ABAA600E83DC9 /* Sources */,
 				C25BA3122D6ABAA600E83DC9 /* Frameworks */,
 				C25BA3132D6ABAA600E83DC9 /* Resources */,
+				C25BA38E2D75466A00E83DC9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -138,60 +132,19 @@
 			);
 			fileSystemSynchronizedGroups = (
 				C25BA3172D6ABAA600E83DC9 /* HLogger */,
+				C25BA3B92D755BA200E83DC9 /* Schema */,
+				C25BA4432D782A8300E83DC9 /* Tool */,
 			);
 			name = HLogger;
 			packageProductDependencies = (
 				C25BA36E2D6C52FC00E83DC9 /* SwiftProtobuf */,
+				C25BA3DB2D7818CD00E83DC9 /* AWSCognitoIdentity */,
+				C25BA3DD2D7818CD00E83DC9 /* AWSS3 */,
+				C25BA60D2D925FC300E83DC9 /* HCronCore */,
 			);
 			productName = HLogger;
 			productReference = C25BA3152D6ABAA600E83DC9 /* HLogger.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C25BA3242D6ABAA700E83DC9 /* HLoggerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C25BA33C2D6ABAA700E83DC9 /* Build configuration list for PBXNativeTarget "HLoggerTests" */;
-			buildPhases = (
-				C25BA3212D6ABAA700E83DC9 /* Sources */,
-				C25BA3222D6ABAA700E83DC9 /* Frameworks */,
-				C25BA3232D6ABAA700E83DC9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C25BA3272D6ABAA700E83DC9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C25BA3282D6ABAA700E83DC9 /* HLoggerTests */,
-			);
-			name = HLoggerTests;
-			packageProductDependencies = (
-			);
-			productName = HLoggerTests;
-			productReference = C25BA3252D6ABAA700E83DC9 /* HLoggerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C25BA32E2D6ABAA700E83DC9 /* HLoggerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C25BA33F2D6ABAA700E83DC9 /* Build configuration list for PBXNativeTarget "HLoggerUITests" */;
-			buildPhases = (
-				C25BA32B2D6ABAA700E83DC9 /* Sources */,
-				C25BA32C2D6ABAA700E83DC9 /* Frameworks */,
-				C25BA32D2D6ABAA700E83DC9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C25BA3312D6ABAA700E83DC9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C25BA3322D6ABAA700E83DC9 /* HLoggerUITests */,
-			);
-			name = HLoggerUITests;
-			packageProductDependencies = (
-			);
-			productName = HLoggerUITests;
-			productReference = C25BA32F2D6ABAA700E83DC9 /* HLoggerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -206,14 +159,6 @@
 					C25BA3142D6ABAA600E83DC9 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					C25BA3242D6ABAA700E83DC9 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = C25BA3142D6ABAA600E83DC9;
-					};
-					C25BA32E2D6ABAA700E83DC9 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = C25BA3142D6ABAA600E83DC9;
-					};
 				};
 			};
 			buildConfigurationList = C25BA3102D6ABAA600E83DC9 /* Build configuration list for PBXProject "HLogger" */;
@@ -227,6 +172,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				C25BA36D2D6C52FC00E83DC9 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+				C25BA3DA2D7818CD00E83DC9 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C25BA3162D6ABAA600E83DC9 /* Products */;
@@ -234,28 +180,12 @@
 			projectRoot = "";
 			targets = (
 				C25BA3142D6ABAA600E83DC9 /* HLogger */,
-				C25BA3242D6ABAA700E83DC9 /* HLoggerTests */,
-				C25BA32E2D6ABAA700E83DC9 /* HLoggerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C25BA3132D6ABAA600E83DC9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C25BA3232D6ABAA700E83DC9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C25BA32D2D6ABAA700E83DC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,34 +202,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C25BA3212D6ABAA700E83DC9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C25BA32B2D6ABAA700E83DC9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C25BA3272D6ABAA700E83DC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C25BA3142D6ABAA600E83DC9 /* HLogger */;
-			targetProxy = C25BA3262D6ABAA700E83DC9 /* PBXContainerItemProxy */;
-		};
-		C25BA3312D6ABAA700E83DC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C25BA3142D6ABAA600E83DC9 /* HLogger */;
-			targetProxy = C25BA3302D6ABAA700E83DC9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C25BA3372D6ABAA700E83DC9 /* Debug */ = {
@@ -426,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HLogger/Preview Content\"";
@@ -433,15 +337,16 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HLogger/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to track movements efficiently.";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app needs access to your location even when running in the background.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs access to your location even when running in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location to log your movement activities.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location while the app is active.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data to detect activity types like walking, running, and driving.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,12 +356,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = site.hugohu.HLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HLogger/Preview Content\"";
@@ -472,15 +380,16 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HLogger/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to track movements efficiently.";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app needs access to your location even when running in the background.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs access to your location even when running in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location to log your movement activities.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location while the app is active.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data to detect activity types like walking, running, and driving.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,84 +399,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = site.hugohu.HLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		C25BA33D2D6ABAA700E83DC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5349Y2KC7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = site.hugohu.HLoggerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HLogger.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HLogger";
-			};
-			name = Debug;
-		};
-		C25BA33E2D6ABAA700E83DC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5349Y2KC7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = site.hugohu.HLoggerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HLogger.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HLogger";
-			};
-			name = Release;
-		};
-		C25BA3402D6ABAA700E83DC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5349Y2KC7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = site.hugohu.HLoggerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HLogger;
-			};
-			name = Debug;
-		};
-		C25BA3412D6ABAA700E83DC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5349Y2KC7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = site.hugohu.HLoggerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HLogger;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -592,24 +431,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C25BA33C2D6ABAA700E83DC9 /* Build configuration list for PBXNativeTarget "HLoggerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C25BA33D2D6ABAA700E83DC9 /* Debug */,
-				C25BA33E2D6ABAA700E83DC9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C25BA33F2D6ABAA700E83DC9 /* Build configuration list for PBXNativeTarget "HLoggerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C25BA3402D6ABAA700E83DC9 /* Debug */,
-				C25BA3412D6ABAA700E83DC9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -621,6 +442,14 @@
 				minimumVersion = 1.28.2;
 			};
 		};
+		C25BA3DA2D7818CD00E83DC9 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/aws-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.31;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -628,6 +457,20 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C25BA36D2D6C52FC00E83DC9 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
 			productName = SwiftProtobuf;
+		};
+		C25BA3DB2D7818CD00E83DC9 /* AWSCognitoIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C25BA3DA2D7818CD00E83DC9 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSCognitoIdentity;
+		};
+		C25BA3DD2D7818CD00E83DC9 /* AWSS3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C25BA3DA2D7818CD00E83DC9 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSS3;
+		};
+		C25BA60D2D925FC300E83DC9 /* HCronCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HCronCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

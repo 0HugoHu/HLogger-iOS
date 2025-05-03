@@ -7,38 +7,45 @@
 
 import Foundation
 
+struct LogMetadata: Codable {
+    let fileName: String
+    let timestamp: String
+    let entryCount: Int
+    let fileSize: Int64
+}
+
 class HFileManager {
     static let shared = HFileManager()
-    private let fileManager = FileManager.default
+    public let fileManager = FileManager.default
     
     private init() {}
     
+    /// Get the app's document directory
     func getDocumentsDirectory() -> URL {
         fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
     }
     
-    func getFileURL(for suffix: String, filenamePrefix: Int) -> URL {
-        getDocumentsDirectory().appendingPathComponent("\(HDateTime.shared.string(from: Date()).prefix(filenamePrefix))_\(suffix).pb")
+    /// Get the file URL using a dynamic suffix and prefix length
+    func getFileURL(for suffix: String, filenamePrefixLength: Int) -> URL {
+        getDocumentsDirectory().appendingPathComponent("\(HDateTime.shared.utcString(from: Date()).prefix(filenamePrefixLength))_\(suffix).pb")
     }
     
+    /// Get the file URL for a specific filename
     func getFileURL(for fileName: String) -> URL {
         getDocumentsDirectory().appendingPathComponent(fileName)
     }
     
+    /// Save data to a file
     func saveLogData(_ data: Data, to fileURL: URL) throws {
         try data.write(to: fileURL, options: .atomic)
     }
     
-    func loadLog(from fileURL: URL) throws -> Locationlogging_LocationLog? {
-        guard fileManager.fileExists(atPath: fileURL.path) else { return nil }
-        let data = try Data(contentsOf: fileURL)
-        return try Locationlogging_LocationLog(serializedBytes: data)
-    }
-    
+    /// Delete a file by name
     func deleteFile(named fileName: String) throws {
-        try fileManager.removeItem(at: getDocumentsDirectory().appendingPathComponent(fileName))
+        try fileManager.removeItem(at: getFileURL(for: fileName))
     }
     
+    /// List files in the document directory with a specific suffix
     func listFiles(withSuffix suffix: String) -> [String] {
         (try? fileManager.contentsOfDirectory(atPath: getDocumentsDirectory().path)
             .filter { $0.hasSuffix(suffix) }) ?? []

@@ -1,16 +1,12 @@
 #!/bin/bash
-//  generate_protos.sh
-//  HLogger
-//
-//  Created by Hugooooo on 3/1/25.
-//
 
 # Define the destination directory for compiled Swift protobufs
-PROTO_DEST="../HLogger/Schema"
+PROTO_DEST="../Schema"
 
 # Define the source locations for proto files
 PROTO_SOURCES=(
     "https://s3.us-east-2.amazonaws.com/logger.protocol/location_schema.proto"
+    "https://s3.us-east-2.amazonaws.com/logger.protocol/textlog_schema.proto"
 )
 
 # Create destination folder if it doesn't exist

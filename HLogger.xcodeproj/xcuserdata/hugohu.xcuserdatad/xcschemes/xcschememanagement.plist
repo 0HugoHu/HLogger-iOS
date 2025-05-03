@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HKeyboard.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>HLogger.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C25BA3142D6ABAA600E83DC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C25BA3242D6ABAA700E83DC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C25BA32E2D6ABAA700E83DC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C25BA3812D75466A00E83DC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

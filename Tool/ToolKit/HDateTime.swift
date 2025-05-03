@@ -21,8 +21,18 @@ class HDateTime {
         return isoFormatter.string(from: date)
     }
     
-    func date(from string: String) -> Date? {
+    func utcString(from date: Date) -> String {
+        isoFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return isoFormatter.string(from: date)
+    }
+    
+    func date(from string: String) -> Date {
         isoFormatter.timeZone = TimeZone.current
-        return isoFormatter.date(from: string)
+        return isoFormatter.date(from: string)!
+    }
+    
+    func utcDate(from string: String) -> Date {
+        isoFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return isoFormatter.date(from: string)!
     }
 }
